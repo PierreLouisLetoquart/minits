@@ -1,7 +1,22 @@
 {
   "name": "minits",
+  "version": "0.0.1",
   "type": "module",
-  "private": true,
+  "private": false,
+  "description": "TypeScript implementations of algorithms and data structures",
+  "keywords": [
+    "typescript",
+    "algorithms",
+    "data-structures",
+    "linked-list",
+    "deque"
+  ],
+  "author": "Pierre-Louis Létoquart <randlgint@proton.me>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PierreLouisLetoquart/minits.git"
+  },
   "main": "./dist/minits.cjs",
   "module": "./dist/minits.js",
   "types": "./dist/index.d.ts",
@@ -18,7 +33,8 @@
   "scripts": {
     "test": "bun test",
     "prebuild": "bun test",
-    "build": "vite build && tsc --emitDeclarationOnly --outDir dist"
+    "build": "vite build && tsc --emitDeclarationOnly --outDir dist",
+    "prepublishOnly": "bun run build"
   },
   "lint-staged": {
     "src/**/*.{ts,js}": [
