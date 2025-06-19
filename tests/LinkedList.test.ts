@@ -109,7 +109,7 @@ describe("LinkedList – get", () => {
   });
 });
 
-describe("LinkedList – insertAt", () => {
+describe("LinkedList – insert", () => {
   test("insert at the beginning (index 0)", () => {
     const list = new LinkedList<number>();
     list.append(2);
@@ -162,7 +162,7 @@ describe("LinkedList – insertAt", () => {
   });
 });
 
-describe("LinkedList – removeAt", () => {
+describe("LinkedList – remove", () => {
   test("remove at the beginning (index 0)", () => {
     const list = new LinkedList<number>();
     list.append(6);

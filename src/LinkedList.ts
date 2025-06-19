@@ -167,13 +167,13 @@ export class LinkedList<T> {
     if (this.tail) {
       this.tail.next = newNode;
       this.tail = newNode;
-      this._incrementSize();
     } else {
       // Empty list case
       this.head = newNode;
       this.tail = newNode;
-      this.length = 1;
     }
+
+    this._incrementSize();
   }
 
   /**
@@ -188,13 +188,13 @@ export class LinkedList<T> {
     if (this.head) {
       newNode.next = this.head;
       this.head = newNode;
-      this._incrementSize();
     } else {
       // Empty list case
       this.head = newNode;
       this.tail = newNode;
-      this.length = 1;
     }
+
+    this._incrementSize();
   }
 
   /**
