@@ -28,4 +28,5 @@ You can find the test cases in the `tests/` directory.
 
 ## ✅ Implemented
 
-- Linked List (Singly)
+- Linked List
+- Doubly Linked List
