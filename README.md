@@ -36,4 +36,5 @@ You can find the test cases in the `tests/` directory.
 
 - Linked List
 - Doubly Linked List
-- Queue (backed by doubly ll)
+- Queue
+- Deque
