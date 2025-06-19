@@ -1,5 +1,5 @@
 {
-  "name": "minits",
+  "name": "xilo",
   "version": "0.0.1",
   "type": "module",
   "private": false,
@@ -11,20 +11,20 @@
     "linked-list",
     "deque"
   ],
-  "author": "Pierre-Louis Létoquart <randlgint@proton.me>",
+  "author": "Pierre-Louis Létoquart <randlgint@proton.me> (letoquart.com)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PierreLouisLetoquart/minits.git"
+    "url": "git@github.com:PierreLouisLetoquart/xilo.git"
   },
-  "main": "./dist/minits.cjs",
-  "module": "./dist/minits.js",
+  "main": "./dist/xilo.cjs",
+  "module": "./dist/xilo.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/minits.js",
-      "require": "./dist/minits.cjs"
+      "import": "./dist/xilo.js",
+      "require": "./dist/xilo.cjs"
     }
   },
   "files": [
