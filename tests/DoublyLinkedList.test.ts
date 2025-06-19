@@ -162,7 +162,7 @@ describe("DoublyLinkedList – insert", () => {
   });
 
   // we use a ts-expect-error because tests run after compilation
-  test("rejects insertAt with wrong value type", () => {
+  test("rejects insert with wrong value type", () => {
     const list = new DoublyLinkedList<number>();
 
     // @ts-expect-error - Type 'string' is not assignable to type 'number'

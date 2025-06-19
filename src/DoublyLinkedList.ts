@@ -483,7 +483,7 @@ export class DoublyLinkedList<T> {
   }
 
   /**
-   * Reverses the doubly linked list in place.
+   * Reverses the DoublyLinkedList in place.
    * Updates head and tail accordingly.
    */
   reverse(): void {

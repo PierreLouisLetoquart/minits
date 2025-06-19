@@ -456,7 +456,7 @@ export class LinkedList<T> {
   }
 
   /**
-   * Reverses the linked list in place.
+   * Reverses the LinkedList in place.
    * Updates head and tail accordingly.
    */
   reverse(): void {
