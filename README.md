@@ -12,6 +12,10 @@ bun install
 bun test
 ```
 
+## 🔧 Development
+
+Pre-commit hooks run all tests automatically to ensure code quality (using `husky` and `bun test`).
+
 ## 📚 Context
 
 This repository contains TypeScript implementations of various algorithms and data structures.
