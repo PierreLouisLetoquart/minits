@@ -13,6 +13,8 @@ class DoubleNode<T> {
 
 /**
  * A generic singly linked list implementation.
+ *
+ * @typeParam T - The type of elements stored in the queue.
  */
 export class DoublyLinkedList<T> {
   private head: DoubleNode<T> | null = null;
