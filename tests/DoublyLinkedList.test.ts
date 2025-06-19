@@ -89,6 +89,62 @@ describe("DoublyLinkedList – prepend", () => {
   });
 });
 
+describe("DoublyLinkedList - pop", () => {
+  test("should return null when popping from an empty list", () => {
+    const list = new DoublyLinkedList<number>();
+    expect(list.pop()).toBeNull();
+    expect(list.size).toBe(0);
+  });
+
+  test("should pop the last element", () => {
+    const list = DoublyLinkedList.fromArray([1, 2, 3]);
+    const popped = list.pop();
+
+    expect(popped).toBe(3);
+    expect(list.toArray()).toEqual([1, 2]);
+    expect(list.getTail()).toBe(2);
+    expect(list.size).toBe(2);
+  });
+
+  test("should handle popping the only element", () => {
+    const list = DoublyLinkedList.fromArray([42]);
+    const popped = list.pop();
+
+    expect(popped).toBe(42);
+    expect(list.size).toBe(0);
+    expect(list.getHead()).toBeNull();
+    expect(list.getTail()).toBeNull();
+  });
+});
+
+describe("DoublyLinkedList - shift", () => {
+  test("should return null when shifting from an empty list", () => {
+    const list = new DoublyLinkedList<number>();
+    expect(list.shift()).toBeNull();
+    expect(list.size).toBe(0);
+  });
+
+  test("should shift the first element", () => {
+    const list = DoublyLinkedList.fromArray([1, 2, 3]);
+    const shifted = list.shift();
+
+    expect(shifted).toBe(1);
+    expect(list.toArray()).toEqual([2, 3]);
+    expect(list.getHead()).toBe(2);
+    expect(list.size).toBe(2);
+  });
+
+  test("should handle shifting the only element", () => {
+    const list = DoublyLinkedList.fromArray([99]);
+    const shifted = list.shift();
+
+    expect(shifted).toBe(99);
+    expect(list.size).toBe(0);
+    expect(list.getHead()).toBeNull();
+    expect(list.getTail()).toBeNull();
+  });
+});
+
 describe("DoublyLinkedList – get", () => {
   test("get element at specific index", () => {
     const list = new DoublyLinkedList<number>();

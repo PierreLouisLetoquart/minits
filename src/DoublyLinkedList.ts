@@ -199,6 +199,50 @@ export class DoublyLinkedList<T> {
   }
 
   /**
+   * Removes and returns the last element of the list (tail).
+   *
+   * @returns The removed value, or `null` if the list is empty.
+   */
+  pop(): T | null {
+    if (!this.tail) return null;
+
+    const val = this.tail.value;
+    this.tail = this.tail.prev;
+
+    if (this.tail) {
+      this.tail.next = null;
+    } else {
+      this.head = null;
+    }
+
+    this._decrementSize();
+
+    return val;
+  }
+
+  /**
+   * Removes and returns the first element of the list (head).
+   *
+   * @returns The removed value, or `null` if the list is empty.
+   */
+  shift(): T | null {
+    if (!this.head) return null;
+
+    const val = this.head.value;
+    this.head = this.head.next;
+
+    if (this.head) {
+      this.head.prev = null;
+    } else {
+      this.tail = null;
+    }
+
+    this._decrementSize();
+
+    return val;
+  }
+
+  /**
    * Inserts a new value at a specific index.
    * Throws an error if the index is out of bounds.
    *
