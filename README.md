@@ -14,7 +14,7 @@ bun test
 
 ## 🔧 Development
 
-Pre-commit hooks run all tests automatically to ensure code quality (using `husky` and `bun test`).
+Pre-commit hooks run all tests automatically (no worries 💩)
 
 ## 📚 Context
 
@@ -26,6 +26,8 @@ The focus is on learning and deepening understanding of:
 - TypeScript (with attention to typing, tooling, modularity)
 - Classical algorithms and data structures
 - Test-driven development using [Bun](https://bun.sh/)
+- Pre-commit hooks using [Husky](https://github.com/typicode/husky)
+- CI with Github actions
 
 Each implementation is fully tested using Bun’s built-in test runner.
 You can find the test cases in the `tests/` directory.
@@ -34,3 +36,4 @@ You can find the test cases in the `tests/` directory.
 
 - Linked List
 - Doubly Linked List
+- Queue (backed by doubly ll)
