@@ -1,6 +1,6 @@
 {
   "name": "xilo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "private": false,
   "description": "TypeScript implementations of algorithms and data structures",
@@ -32,14 +32,10 @@
   ],
   "scripts": {
     "test": "bun test",
+    "prepare": "node .husky/install.mjs",
     "prebuild": "bun test",
     "build": "vite build && tsc --emitDeclarationOnly --outDir dist",
     "prepublishOnly": "bun run build"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,js}": [
-      "bun test --related"
-    ]
   },
   "devDependencies": {
     "@types/bun": "latest",
