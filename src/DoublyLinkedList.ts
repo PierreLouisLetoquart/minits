@@ -271,63 +271,6 @@ export class DoublyLinkedList<T> {
   // ================================
 
   /**
-   * Push to front (Stack push operation) - O(1)
-   * Optimized for Stack usage - prefer this over append for Stack
-   *
-   * @param value - The value to push to the front.
-   */
-  pushFront(value: T): void {
-    const newNode = this.getNode(value);
-    this._incrementModCount();
-
-    if (this.head) {
-      newNode.next = this.head;
-      this.head = newNode;
-    } else {
-      this.head = newNode;
-      this.tail = newNode;
-    }
-
-    this._incrementSize();
-  }
-
-  /**
-   * Pop from front (Stack pop operation) - O(1)
-   * Returns undefined instead of throwing for better Stack performance
-   *
-   * @returns The value from the front of the list, or undefined if empty.
-   */
-  popFront(): T | undefined {
-    if (!this.head) {
-      return undefined;
-    }
-
-    this._incrementModCount();
-    const value = this.head.value;
-    const oldHead = this.head;
-
-    this.head = this.head.next;
-    this._decrementSize();
-
-    if (!this.head) {
-      this.tail = null;
-    }
-
-    this.returnNode(oldHead);
-    return value;
-  }
-
-  /**
-   * Peek at front (Stack peek operation) - O(1)
-   * Returns the front value without removing it.
-   *
-   * @returns The value at the front of the list, or undefined if empty.
-   */
-  peekFront(): T | undefined {
-    return this.head?.value;
-  }
-
-  /**
    * Appends a new element to the end of the linked list.
    *
    * @param value - The value to append.
