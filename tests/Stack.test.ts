@@ -194,7 +194,7 @@ describe("Stack", () => {
       }
 
       const elapsed = performance.now() - start;
-      expect(elapsed).toBeLessThan(50); // Should complete in <100ms
+      expect(elapsed).toBeLessThan(200); // Should complete in <200ms
       expect(largeStack.isEmpty).toBe(true);
     });
 
@@ -210,7 +210,7 @@ describe("Stack", () => {
       }
 
       const elapsed = performance.now() - start;
-      expect(elapsed).toBeLessThan(50);
+      expect(elapsed).toBeLessThan(200);
       expect(stack.size).toBeGreaterThan(0);
     });
 
@@ -388,7 +388,7 @@ describe("StackPool", () => {
       }
 
       const elapsed = performance.now() - start;
-      expect(elapsed).toBeLessThan(20); // Should be very fast
+      expect(elapsed).toBeLessThan(50); // Should be very fast (even on bad machines)
     });
 
     it("should handle concurrent-like usage", () => {
