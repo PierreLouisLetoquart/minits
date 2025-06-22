@@ -38,3 +38,4 @@ You can find the test cases in the `tests/` directory.
 - Doubly Linked List
 - Queue
 - Deque
+- Stack
