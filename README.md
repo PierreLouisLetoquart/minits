@@ -39,3 +39,5 @@ You can find the test cases in the `tests/` directory.
 - Queue
 - Deque
 - Stack
+- Binary Tree (wip...)
+- Binary Search Tree
